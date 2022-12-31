@@ -1,4 +1,4 @@
-import { TaskContext } from "../contexts/TaskContext";
+import { TaskContext } from "../contexts/TaskContext"; //from react
 import { useEffect, useContext, useState } from "react";
 import styles from './TaskItem.module.css';
 
