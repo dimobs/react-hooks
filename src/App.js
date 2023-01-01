@@ -7,6 +7,7 @@ import CreateTask from './components/CreateTask'; //add task
 import styles from './App.module.css';
 import DropDwonsMenu from './components/dropDwnMu/DropDownMenu';
 
+
 function App() {
     const [tasks, setTasks, isLoading] = useFetch('http://localhost:3030/jsonstore/todos', []);
     const { removeTodo, createTodo, updateTodo } = useTodosApi();
@@ -58,10 +59,7 @@ function App() {
                 </main>
                 <section>
                   <DropDwonsMenu />
-                    {isLoading 
-                        ? <p>Loading...</p>  
-                        : <p>Done!</p> 
-                    }
+             
                 </section>
 
             </div>
