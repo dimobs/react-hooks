@@ -23,9 +23,10 @@ const TaskItem = ({
 
     const onEdit = (e) => {
         e.preventDefault();
+        
         const { title } = Object.fromEntries(new FormData(e.target));
-
         taskEditHandler(task, title);
+
         setIsEdit(false);
     };
 
