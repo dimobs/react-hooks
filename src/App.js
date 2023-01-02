@@ -20,6 +20,7 @@ function App() {
         ]);
     };
 
+
     const taskDeleteHandler = async (taskId) => {
         await removeTodo(taskId);
 
@@ -35,7 +36,7 @@ function App() {
     };
 
     const taskEditHandler = async (task, newTitle) => {
-        const updatedTask = { ...task, title: newTitle };
+        const updatedTask = { ...task, title: newTitle.trim()};
 
         await updateTodo(task._id, updatedTask);
 
@@ -58,7 +59,7 @@ function App() {
                     <CreateTask taskCreateHandler={taskCreateHandler} />
                 </main>
                 <section>
-                  <DropDwonsMenu />
+                  <DropDwonsMenu tasks={tasks} />
              
                 </section>
 

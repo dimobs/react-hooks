@@ -48,8 +48,8 @@ const TaskItem = ({
                     >
                         {task.title}
                     </span>
-                    <button onClick={() => taskDeleteHandler(task._id)}>x</button>
                     <button onClick={taskEditClickHandler}>edit</button>
+                    <button onClick={() => taskDeleteHandler(task._id)}>x</button>
                 </>
             }
         </li>
@@ -57,3 +57,4 @@ const TaskItem = ({
 };
 
 export default TaskItem;
+ //resurse: https://codesandbox.io/s/o6gdnj?file=/public/index.html

@@ -2,13 +2,30 @@ import { useState } from "react";
 
 const CreateTask = ({
     taskCreateHandler
+    // const taskCreateHandler = async (newTask) => {
+//     const createdTask = await createTodo(newTask)
+//     setTasks(state => [
+//         ...state,
+//         createdTask,
+//     ]);
+// };
+
+// const taskCreateHandler = async (newTask) => {
+//     const createdTask = await createTodo(newTask)
+//     setTasks(state => [
+//         ...state,
+//         createdTask,
+//     ]);
+// };
 }) => {
     const [task, setTask] = useState('');
 
     const onSubmit = (e) => {
         e.preventDefault();
-        
-        taskCreateHandler(task)
+
+        if (task === "") {return}
+
+        taskCreateHandler(task.trim())
         setTask('');
     }
 
@@ -32,3 +49,5 @@ const CreateTask = ({
 };
 
 export default CreateTask;
+
+
